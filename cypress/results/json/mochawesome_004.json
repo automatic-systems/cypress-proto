@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-16T12:47:10.997Z",
+    "end": "2021-04-16T12:47:37.362Z",
+    "duration": 26365,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "af344636-2379-4e2b-87f8-11854ca0a433",
+      "title": "",
+      "fullFile": "cypress/integration/gemini/userSession.spec.js",
+      "file": "cypress/integration/gemini/userSession.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "008d5aa1-563b-41ca-ad15-348a22138e15",
+          "title": "User Session Management and recovery",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Signing in into LMS Portal",
+              "fullTitle": "User Session Management and recovery Signing in into LMS Portal",
+              "timedOut": null,
+              "duration": 9341,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();",
+              "err": {},
+              "uuid": "80e0d078-53f3-4c77-b8a4-9595632b23f7",
+              "parentUUID": "008d5aa1-563b-41ca-ad15-348a22138e15",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logout from LMS Portal",
+              "fullTitle": "User Session Management and recovery Logout from LMS Portal",
+              "timedOut": null,
+              "duration": 10662,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.get('[title=\"Log out\"]').click();\ncy.url().should('eq', 'https://geminisolutions.talentlms.com/index');\ncy.contains(\"Login\").should('exist');\ncy.log(\"logout was succesfull\");",
+              "err": {},
+              "uuid": "895d20f7-aafe-4b1e-8dc3-cfab1443dc2e",
+              "parentUUID": "008d5aa1-563b-41ca-ad15-348a22138e15",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Send Password recovery link",
+              "fullTitle": "User Session Management and recovery Send Password recovery link",
+              "timedOut": null,
+              "duration": 6217,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a:contains(password)\").click();\ncy.contains(\"Reset password\").should('exist');\ncy.get('input[name=username]').type(username);\ncy.contains(\"Send\").click();\ncy.contains('A password reset email has been sent to your email account');\ncy.log(\"Password recovery link sent\");",
+              "err": {},
+              "uuid": "132a3d79-4945-4d3b-932b-ec62ba61f072",
+              "parentUUID": "008d5aa1-563b-41ca-ad15-348a22138e15",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "80e0d078-53f3-4c77-b8a4-9595632b23f7",
+            "895d20f7-aafe-4b1e-8dc3-cfab1443dc2e",
+            "132a3d79-4945-4d3b-932b-ec62ba61f072"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26220,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

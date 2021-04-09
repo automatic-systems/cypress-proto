@@ -1,0 +1,227 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-16T12:46:42.743Z",
+    "end": "2021-04-16T12:47:03.075Z",
+    "duration": 20332,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6bb79713-3521-4125-a6fe-d4f5f0867d61",
+      "title": "",
+      "fullFile": "cypress/integration/gemini/userReport.sepc.js",
+      "file": "cypress/integration/gemini/userReport.sepc.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6a79492-fd7c-4e54-a56e-2981553ba687",
+          "title": "User Profile and Information",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "'My Info' is accessible to User",
+              "fullTitle": "User Profile and Information 'My Info' is accessible to User",
+              "timedOut": null,
+              "duration": 13274,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#tl-dropdown-roles .tl-nabvar-roles-button\").trigger(\"mouseover\");\ncy.get(\"#tl-dropdown-roles .dropdown-menu\").should(\"be.visible\").as(\"menu\");\ncy.get(\"@menu\").contains(\"My info\", {\n  matchCase: false\n}).click();\ncy.url().should(\"match\", /^https\\:\\/\\/geminisolutions\\.talentlms\\.com\\/user\\/info/);",
+              "err": {},
+              "uuid": "31e74ea8-444c-4616-bab4-f206281cef76",
+              "parentUUID": "d6a79492-fd7c-4e54-a56e-2981553ba687",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "74fbb985-5dfc-4727-9c5a-d451214078c1",
+              "title": "User information Accessibility and correct fields",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Current Password field is empty ",
+                  "fullTitle": "User Profile and Information User information Accessibility and correct fields Current Password field is empty ",
+                  "timedOut": null,
+                  "duration": 469,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"input[name=password]\").should(\"be.empty\").and(\"not.be.disabled\");",
+                  "err": {},
+                  "uuid": "5af88b89-647b-4ce6-ac5c-0a59646a0f37",
+                  "parentUUID": "74fbb985-5dfc-4727-9c5a-d451214078c1",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Shows Emails restriction checkbox",
+                  "fullTitle": "User Profile and Information User information Accessibility and correct fields Shows Emails restriction checkbox",
+                  "timedOut": null,
+                  "duration": 37,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"[type=checkbox][name=restrict_email]\").should(\"exist\").should(\"not.be.disabled\");",
+                  "err": {},
+                  "uuid": "4b100b43-bd75-4427-9076-ae7d19c4f006",
+                  "parentUUID": "74fbb985-5dfc-4727-9c5a-d451214078c1",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Shows Delete Account button",
+                  "fullTitle": "User Profile and Information User information Accessibility and correct fields Shows Delete Account button",
+                  "timedOut": null,
+                  "duration": 181,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"a.tl-more-options-btn\").should(\"exist\").click();\ncy.get(\".form-actions \").contains(\"Delete\", {\n  matchCase: false\n}).should(\"exist\").and(\"not.be.disabled\");",
+                  "err": {},
+                  "uuid": "da9b63f4-c990-4d59-ac75-154188ce2d8c",
+                  "parentUUID": "74fbb985-5dfc-4727-9c5a-d451214078c1",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Shows Emails restriction checkbox",
+                  "fullTitle": "User Profile and Information User information Accessibility and correct fields Shows Emails restriction checkbox",
+                  "timedOut": null,
+                  "duration": 28,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"[type=checkbox][name=restrict_email]\").should(\"exist\").should(\"not.be.disabled\");",
+                  "err": {},
+                  "uuid": "d57a2ecf-e813-47d7-85b4-535eaea98cd5",
+                  "parentUUID": "74fbb985-5dfc-4727-9c5a-d451214078c1",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Update User Profile is working",
+                  "fullTitle": "User Profile and Information User information Accessibility and correct fields Update User Profile is working",
+                  "timedOut": null,
+                  "duration": 6216,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "let newbio = Math.random();\ncy.get(\"textarea[name=description]\").invoke(\"val\", newbio);\ncy.intercept(\"/user/checkuniquelogin/*\", '{\"success\":true,\"data\":{\"valid\":true,\"message\":\"\"}}');\ncy.intercept(\"/user/checkuniqueemail/*\", '{\"success\":true,\"data\":{\"valid\":true,\"message\":\"\"}}');\ncy.contains(\"Update user\", {\n  matchCase: false\n}).click();\ncy.url().should(\"match\", /^https\\:\\/\\/geminisolutions\\.talentlms\\.com\\/user\\/info/);\ncy.get(\"textarea[name=description]\").invoke(\"val\").should(\"eq\", newbio);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://geminisolutions.talentlms.com/index' to match /^https\\:\\/\\/geminisolutions\\.talentlms\\.com\\/user\\/info/",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://geminisolutions.talentlms.com/index' to match /^https\\:\\/\\/geminisolutions\\.talentlms\\.com\\/user\\/info/\n    at Context.eval (https://geminisolutions.talentlms.com/__cypress/tests?p=cypress/integration/gemini/userReport.sepc.js:136:16)",
+                    "diff": null
+                  },
+                  "uuid": "6e2b2dec-bca8-4fbb-99f4-f1aaa0330e2e",
+                  "parentUUID": "74fbb985-5dfc-4727-9c5a-d451214078c1",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5af88b89-647b-4ce6-ac5c-0a59646a0f37",
+                "4b100b43-bd75-4427-9076-ae7d19c4f006",
+                "da9b63f4-c990-4d59-ac75-154188ce2d8c",
+                "d57a2ecf-e813-47d7-85b4-535eaea98cd5"
+              ],
+              "failures": [
+                "6e2b2dec-bca8-4fbb-99f4-f1aaa0330e2e"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 6931,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "31e74ea8-444c-4616-bab4-f206281cef76"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13274,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "cypress-proto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/cypress open",
+    "install": "echo '\\033[0;32m' Set username and password in cypress.json '\\033[0m'",
+    "start:cli": "node_modules/.bin/cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.0.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha": "^8.3.2",
+    "mochawesome": "^6.2.2"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-16T12:46:30.502Z",
+    "end": "2021-04-16T12:46:37.797Z",
+    "duration": 7295,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9d5751b-9b68-4f2f-aa82-c587658fb755",
+      "title": "",
+      "fullFile": "cypress/integration/gemini/unAuthAccess.spec.js",
+      "file": "cypress/integration/gemini/unAuthAccess.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21095232-158e-4468-b9b1-e98fbd27f6fd",
+          "title": "Redirects to login page when not authenticated",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should not show progress info",
+              "fullTitle": "Redirects to login page when not authenticated Should not show progress info",
+              "timedOut": null,
+              "duration": 2347,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clearSession();\ncy.visit('/reports/userinfo/id:1170');\ncy.url().should('match', /index$/).and('exist');\ncy.contains('You need to be logged in to access this page').should('exist').and('be.visible');",
+              "err": {},
+              "uuid": "8a3d7a3d-d3a0-4233-95b8-24c6e1b47c6c",
+              "parentUUID": "21095232-158e-4468-b9b1-e98fbd27f6fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should not show user profile",
+              "fullTitle": "Redirects to login page when not authenticated Should not show user profile",
+              "timedOut": null,
+              "duration": 2473,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clearSession();\ncy.visit('/reports/userinfo/id:1170');\ncy.url().should('match', /index$/).and('exist');\ncy.contains('You need to be logged in to access this page').should('exist').and('be.visible');",
+              "err": {},
+              "uuid": "a8f0f82b-19e6-4952-9e87-1f4677e84143",
+              "parentUUID": "21095232-158e-4468-b9b1-e98fbd27f6fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should not show courses registered",
+              "fullTitle": "Redirects to login page when not authenticated Should not show courses registered",
+              "timedOut": null,
+              "duration": 2432,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clearSession();\ncy.visit('/user/courses/id:1170');\ncy.url().should('match', /index$/).and('exist');\ncy.contains('You need to be logged in to access this page').should('exist').and('be.visible');",
+              "err": {},
+              "uuid": "29f4770e-4a38-4264-8ecc-89995fdcc3e4",
+              "parentUUID": "21095232-158e-4468-b9b1-e98fbd27f6fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8a3d7a3d-d3a0-4233-95b8-24c6e1b47c6c",
+            "a8f0f82b-19e6-4952-9e87-1f4677e84143",
+            "29f4770e-4a38-4264-8ecc-89995fdcc3e4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7252,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

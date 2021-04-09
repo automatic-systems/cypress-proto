@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-16T12:46:10.570Z",
+    "end": "2021-04-16T12:46:24.232Z",
+    "duration": 13662,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cf5e4873-7d7f-4da3-9ece-49ca6d438517",
+      "title": "",
+      "fullFile": "cypress/integration/gemini/progressReport.spec.js",
+      "file": "cypress/integration/gemini/progressReport.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "240a03d2-b80b-4674-bf83-adf077e55273",
+          "title": "Validity of User progress , certification and badges",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "'My Info' is accessible to User",
+              "fullTitle": "Validity of User progress , certification and badges 'My Info' is accessible to User",
+              "timedOut": null,
+              "duration": 12795,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#tl-dropdown-roles .tl-nabvar-roles-button\").trigger(\"mouseover\");\ncy.get(\"#tl-dropdown-roles .dropdown-menu\").should(\"be.visible\").as(\"menu\");\ncy.get(\"@menu\").contains(\"My Progress\", {\n  matchCase: false\n}).click();\ncy.url().should(\"match\", /^https\\:\\/\\/geminisolutions\\.talentlms\\.com\\/reports\\/userinfo/);",
+              "err": {},
+              "uuid": "7b49854f-7f34-40e1-82f8-919f7bd60a50",
+              "parentUUID": "240a03d2-b80b-4674-bf83-adf077e55273",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "'Tests' tab button is visible to user",
+              "fullTitle": "Validity of User progress , certification and badges 'Tests' tab button is visible to user",
+              "timedOut": null,
+              "duration": 464,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#tests-tab').contains('Tests').should(\"exist\").and('be.visible');",
+              "err": {},
+              "uuid": "f2563f38-9dd1-44fe-9f11-d100d856ab90",
+              "parentUUID": "240a03d2-b80b-4674-bf83-adf077e55273",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Showing Test results as sent from server ",
+              "fullTitle": "Validity of User progress , certification and badges Showing Test results as sent from server ",
+              "timedOut": null,
+              "duration": 271,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept(\"/reports/viewusertests/*\", {\n  fixture: 'test.result.1000.html'\n});\ncy.get('#tests-tab').contains('Tests').click();\ncy.get(\"#tl-user-reports-list-tests\").contains(\"1000.00%\").should('exist');",
+              "err": {},
+              "uuid": "3e5fc713-7c5a-4bc2-aaf0-6348153d669c",
+              "parentUUID": "240a03d2-b80b-4674-bf83-adf077e55273",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7b49854f-7f34-40e1-82f8-919f7bd60a50",
+            "f2563f38-9dd1-44fe-9f11-d100d856ab90",
+            "3e5fc713-7c5a-4bc2-aaf0-6348153d669c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13530,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

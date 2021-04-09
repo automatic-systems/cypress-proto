@@ -1,0 +1,11 @@
+{
+    "baseUrl": "https://geminisolutions.talentlms.com",
+    "env": {
+        "username": "nikhilesh.yadav",
+        "password": "nikhilesh.yadav"
+    },
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    }
+}

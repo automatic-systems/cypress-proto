@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-16T12:45:46.702Z",
+    "end": "2021-04-16T12:46:01.864Z",
+    "duration": 15162,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d7f2dfae-d35c-40c2-b2c8-7e164df451aa",
+      "title": "",
+      "fullFile": "cypress/integration/gemini/leaderboard.spec.js",
+      "file": "cypress/integration/gemini/leaderboard.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bb296121-7f09-4a3a-a0e3-aa53461b785e",
+          "title": "Functioning and Validation of Leaderboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Shows Users Points in green score button",
+              "fullTitle": "Functioning and Validation of Leaderboard Shows Users Points in green score button",
+              "timedOut": null,
+              "duration": 9276,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.get('a').contains('POINTS', {\n  matchCase: false\n}).should('be.visible');",
+              "err": {},
+              "uuid": "49772e5e-88cf-4d13-9d62-03782207a373",
+              "parentUUID": "bb296121-7f09-4a3a-a0e3-aa53461b785e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shows Leaderboard on clicking Score button",
+              "fullTitle": "Functioning and Validation of Leaderboard Shows Leaderboard on clicking Score button",
+              "timedOut": null,
+              "duration": 861,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('a').contains('POINTS', {\n  matchCase: false\n}).click();\ncy.get('div.modal,span.modal ').should('be.visible');",
+              "err": {},
+              "uuid": "0a5d3d81-08be-44b6-8905-3c91e09ace93",
+              "parentUUID": "bb296121-7f09-4a3a-a0e3-aa53461b785e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shows names which were sent by server",
+              "fullTitle": "Functioning and Validation of Leaderboard Shows names which were sent by server",
+              "timedOut": null,
+              "duration": 4872,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept(\"/gamification/getpointsleaderboard\", {\n  fixture: 'leaderboard.Wolf_Gupta.html'\n});\ncy.get('td').contains('Wolf_Gupta').should('exist').and('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `td`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `td`, but never found it.\n    at Context.eval (https://geminisolutions.talentlms.com/__cypress/tests?p=cypress/integration/gemini/leaderboard.spec.js:117:8)",
+                "diff": null
+              },
+              "uuid": "ab224f3f-5f89-46b7-85c0-6106dca25ee9",
+              "parentUUID": "bb296121-7f09-4a3a-a0e3-aa53461b785e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "49772e5e-88cf-4d13-9d62-03782207a373",
+            "0a5d3d81-08be-44b6-8905-3c91e09ace93"
+          ],
+          "failures": [
+            "ab224f3f-5f89-46b7-85c0-6106dca25ee9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15009,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
